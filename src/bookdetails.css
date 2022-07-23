@@ -1,0 +1,132 @@
+* {
+    --breadcrumb-link-color: rgb(5, 110, 57);
+    --nav-color: rgb(28, 178, 115);
+    --hover-dark: rgb(14, 126, 80);
+    --web-background: rgb(6, 53, 41);
+    --category-wrapper-background: rgba(255, 255, 255, 0.5);
+    --nav-color-dark: rgb(10, 79, 50);
+}
+
+main {
+    margin-top: calc(2rem + 5vh);
+}
+
+.breadcrumb {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+    font-weight: bold;
+}
+
+.breadcrumb li:first-child {
+    margin-left: 2rem
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--breadcrumb-link-color);
+}
+
+.breadcrumb a:hover {
+    color: var(--nav-color-dark);
+    text-decoration: underline;
+}
+
+.breadcrumb a::after {
+    content: " / \00a0";
+}
+
+.book-info {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1rem;
+    background-color: var(--category-wrapper-background);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.book-img-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50vh;
+}
+
+.sub-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    width: 20%;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    transition: 0.2s ease-in;
+}
+.sub-img-wrapper:hover {
+    opacity: 1;
+}
+
+.main-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.main-img {
+    /* width: 100%; */
+    height: 100%;
+}
+
+.sub-img {
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1
+}
+
+.price-wrapper h1{
+    font-size: 3rem;
+}
+
+.price-wrapper button {
+    width: 50%;
+    height: 30%;
+    border: none;
+    background-color: var(--nav-color);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 3rem;
+}
+
+.price-wrapper button:hover {
+    background-color: var(--hover-dark);
+}
+
+.book-desc {
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.book-name {
+    margin-bottom: 2rem;
+}
+
+.book-desc p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
