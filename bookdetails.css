@@ -144,6 +144,7 @@ main {
 
 .book-desc {
     margin-top: 2rem;
+    margin-bottom: calc(5vh + 2rem);
     width: 80%;
 }
 
