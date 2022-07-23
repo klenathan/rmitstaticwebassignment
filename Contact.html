@@ -34,31 +34,43 @@
         <h1 class="category-heading">📞 Contact Us</h1>
         <form name="contact-form"
         class="contact-form" id="contact-form" action="">
-            <label for="contact-purpose">Contact Purpose: </label>
-            <select required name="contact-purpose" id="contact-purpose">
-                <option value="sell">I want to sell books</option>
-                <option value="buy">I want to buy books</option>
-            </select>
-
-            <label for="name-input">Your name: </label>
-            <input type="text" name="name-input" id="name-input" required>
-
-            <label for="email">Your email: </label>
-            <input type="email" name="email-input" id="email-input" required>
-
-            <label for="telephone">Your phone Number: </label>
-            <input type="number" name="telephone" id="telephone" required>
-            
-            <label for="contact-method">How can we contact you? </label>
-            <div class="checkbox-wrapper">
-                <input required type="checkbox" name="contact-method[]" value="email">By Email
-                <input type="checkbox" name="contact-method[]" value="phone">By Phone
+            <div class="input-wrapper">
+                <label for="contact-purpose">Contact Purpose: </label>
+                <select required name="contact-purpose" id="contact-purpose">
+                    <option value="sell">I want to sell books</option>
+                    <option value="buy">I want to buy books</option>
+                </select>
             </div>
 
-            <label for="news-letter">Do you want to receive our weekly newsletter:</label>
+            <div class="input-wrapper">
+                <label for="name-input">Your name: </label>
+                <input type="text" placeholder="David Beckham" name="name-input" id="name-input" required>
+            </div>
+            
+            <div class="input-wrapper">
+                <label for="email">Your email: </label>
+                <input type="email" placeholder="david@mail.com" name="email-input" id="email-input" required>
+            </div>
+            
+            <div class="input-wrapper">
+                <label for="telephone">Your phone Number: </label>
+                <input type="number" placeholder="0123456789" name="telephone" id="telephone" required>
+            </div>
+            
+            <div class="checkbox-wrapper">
+                <label for="contact-method">How can we contact you? </label>
+                <div class="select-input-wrapper">
+                    <input required type="checkbox" name="contact-method[]" value="email">By Email
+                    <input type="checkbox" name="contact-method[]" value="phone">By Phone
+                </div>
+            </div>
+
             <div class="radio-wrapper">
-                <input required type="radio" name="news-letter" value="yes" checked="checked">Yes
-                <input type="radio" name="news-letter" value="no">No
+                <label for="news-letter">Do you want to receive our weekly newsletter:</label>
+                <div class="select-input-wrapper">
+                    <input required type="radio" name="news-letter" value="yes" checked="checked">Yes
+                    <input type="radio" name="news-letter" value="no">No
+                </div>
             </div>
 
             <label for="note">Extra Note: </label>

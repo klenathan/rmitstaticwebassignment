@@ -10,6 +10,11 @@
     --category-wrapper-background: rgba(255, 255, 255, 0.5);
 }
 
+
+body {
+    background-color: lightblue;
+}
+
 /* Hide form arrow to increase number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -72,6 +77,7 @@ header {
     width: 50%;
 }
 
+
 .nav-bar ul {
     display: flex;
     flex-direction: row;
@@ -90,6 +96,46 @@ header {
     text-decoration: underline black;
 }
 
+
+@media only screen and (max-width: 960px) {
+    header {
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        height: max-content;
+    }
+    .header-logo {
+        width: 5vh;
+        height: 5vh;
+    }
+    .nav-bar {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .nav-bar ul {
+        flex-direction: column;
+    }
+
+    .nav-bar li {
+        width: 100%;
+    }
+
+    .nav-bar a {
+        height: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-bar a:active {
+        background-color: var(--hover-dark);
+    }
+}
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -97,10 +143,13 @@ main {
 }
 .welcome-text {
     margin-top: calc(5vh + 2rem);
+    text-align: center;
 }
+
 .category-heading {
     margin-top: calc(5vh + 2rem);
 }
+
 .book-category-wrapper {
     display: flex;
     flex-direction: column;
@@ -192,7 +241,30 @@ footer ul {
 
 footer a {
     text-decoration: none;
-    columns: var(--nav-color);
+}
+
+
+
+@media only screen and (max-width: 960px) {
+    footer {
+        height: max-content;
+        position: relative;
+    }
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer a{
+        height: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .category-heading {
+        margin-top: 2rem
+    }
 }
 
 .contact-form {
@@ -205,16 +277,30 @@ footer a {
     background-color: var(--category-wrapper-background);
 }
 
-.contact-form select {
-    width: max-content;
-    height: 1.5rem;
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
-.contact-form input {
+.input-wrapper label {
+    margin-right: 1rem;
+}
+
+.contact-form select {
+    width: max-content;
     height: 1.5rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+.contact-form input {
+    height: 1.7rem;
+    flex-grow: 1;
     padding-left: 0.5rem;
+    border-radius: 5px;
+    border: black 1px solid;
 }
 
 .contact-form input:focus {
@@ -225,6 +311,8 @@ footer a {
     margin-bottom: 1rem;
     padding: 1rem;
     resize: none;
+    border-radius: 5px;
+    border: black 1px solid
 }
 
 .contact-form textarea:focus {
@@ -237,10 +325,12 @@ footer a {
     align-items: center;
     height: 2rem;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .checkbox-wrapper input {
+    height: 1rem;
     margin: 0
 }
 
@@ -250,10 +340,12 @@ footer a {
     align-items: center;
     height: 2rem;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .radio-wrapper input {
+    height: 1rem;
     margin: 0;
 }
 
@@ -278,4 +370,51 @@ footer a {
 
 .contact-form-button-wrapper button:hover {
     background-color: var(--hover-dark);
+}
+
+.select-input-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 960px) {
+    .contact-form {
+        width: 80%;
+        /* align-items: flex-start; */
+        padding: 1rem;
+    }
+    .input-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-wrapper label {
+        align-items: l;
+    }
+
+    .checkbox-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        margin-bottom: 2rem
+    }
+
+    .radio-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-form-button-wrapper {
+        flex-direction: row;
+        
+    }
+    .contact-form-button-wrapper button {
+        height: 100%;
+    }
+    .select-input-wrapper {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
