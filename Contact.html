@@ -60,21 +60,27 @@
             <div class="checkbox-wrapper">
                 <label for="contact-method">How can we contact you? </label>
                 <div class="select-input-wrapper">
-                    <input required type="checkbox" name="contact-method[]" value="email">By Email
-                    <input type="checkbox" name="contact-method[]" value="phone">By Phone
+                    <input required type="checkbox" name="contact-method[]" value="email">
+                    <label for="contact-method">By Email</label>
+                    <input type="checkbox" name="contact-method[]" value="phone">
+                    <label for="contact-method">By Phone</label>
                 </div>
             </div>
 
             <div class="radio-wrapper">
                 <label for="news-letter">Do you want to receive our weekly newsletter:</label>
                 <div class="select-input-wrapper">
-                    <input required type="radio" name="news-letter" value="yes" checked="checked">Yes
-                    <input type="radio" name="news-letter" value="no">No
+                    <input required type="radio" name="news-letter" value="yes" checked="checked">
+                    <label for="news-letter">Yes</label>
+                    <input type="radio" name="news-letter" value="no">
+                    <label for="news-letter">No</label>
                 </div>
             </div>
 
-            <label for="note">Extra Note: </label>
-            <textarea name="note" id="note" cols="30" rows="10"></textarea>
+            <div class="note-wrapper">
+                <label for="note">Extra Note: </label>
+                <textarea name="note" id="note" cols="30" rows="10"></textarea>
+            </div>
 
             <div class="contact-form-button-wrapper">
                 <button type="submit">Submit request</button>
